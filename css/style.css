@@ -727,62 +727,113 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* =============================================
-   ⑧ Learningセクション
+   ⑧ Learning Threeセクション（3つの学び）
    ============================================= */
-.learning {
+.learning-three {
   background: var(--beige);
 }
 
-.learning-main {
-  margin-bottom: 36px;
-}
-
-.learning-lead {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.05rem;
-  color: var(--dark-brown);
+.learning-intro {
+  font-size: 0.95rem;
+  color: var(--text);
   line-height: 2;
+  margin-bottom: 36px;
+  padding: 22px 26px;
   background: var(--white);
-  padding: 24px 28px;
-  border-radius: 8px;
+  border-radius: 10px;
   border-left: 4px solid var(--green);
   box-shadow: 0 2px 12px var(--shadow);
-  margin-bottom: 0;
 }
 
-.learning-details {
-  display: flex;
-  flex-direction: column;
+.learning-cards {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.learning-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+.learning-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--beige-dark);
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.li-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--terracotta);
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 8px;
+.learning-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px var(--shadow-md);
 }
 
-.learning-item strong {
-  display: block;
-  font-size: 0.95rem;
+/* カード1：生成り×くすみブラウン */
+.learning-card:nth-child(1) .learning-card-top {
+  background: linear-gradient(140deg, #EDE5D8 0%, #DDD0C0 100%);
+}
+
+/* カード2：くすみグリーン */
+.learning-card:nth-child(2) .learning-card-top {
+  background: linear-gradient(140deg, #DDE9DC 0%, #C8DCC8 100%);
+}
+
+/* カード3：淡いオレンジ */
+.learning-card:nth-child(3) .learning-card-top {
+  background: linear-gradient(140deg, #F0E0CC 0%, #E4C8A8 100%);
+}
+
+.learning-card-top {
+  padding: 28px 24px 22px;
+  border-bottom: 1px solid var(--beige-dark);
+}
+
+.learning-card-num {
+  font-size: 1.5rem;
+  color: var(--terra-light);
+  line-height: 1;
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+.learning-card-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
   color: var(--dark-brown);
-  margin-bottom: 4px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.learning-item p {
+.learning-card-subtitle {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  color: var(--terracotta);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.learning-card-body {
+  padding: 24px;
   font-size: 0.88rem;
   color: var(--text-mid);
-  line-height: 1.85;
-  margin: 0;
+  line-height: 1.95;
+}
+
+.learning-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 780px) {
+  .learning-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .learning-card-top {
+    padding: 22px 18px 16px;
+  }
+  .learning-card-body {
+    padding: 18px;
+  }
 }
 
 /* =============================================
@@ -1520,7 +1571,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .values::before,
-.learning::before,
+.learning-three::before,
 .parents::before {
   content: '';
   display: block;
