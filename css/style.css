@@ -1476,6 +1476,13 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.05em;
 }
 
+.note-coming-soon {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
 /* =============================================
    フッター
    ============================================= */
@@ -1515,6 +1522,11 @@ p:last-child { margin-bottom: 0; }
   color: var(--stone-light);
   margin-bottom: 4px;
   line-height: 1.6;
+}
+
+.footer-info-note {
+  font-size: 0.78rem !important;
+  color: var(--stone) !important;
 }
 
 .footer-info a {
