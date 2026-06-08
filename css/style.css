@@ -1145,6 +1145,53 @@ p:last-child { margin-bottom: 0; }
   }
 }
 
+/* 1枚カードレイアウト */
+.staff-single {
+  display: flex;
+  justify-content: center;
+}
+
+.staff-card--single {
+  max-width: 560px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 32px;
+  gap: 24px;
+}
+
+.staff-avatar--lg {
+  flex-shrink: 0;
+}
+
+.avatar-placeholder--lg {
+  width: 110px;
+  height: 110px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--stone-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.staff-name--lg {
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 600px) {
+  .staff-card--single {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
 /* =============================================
    ⑬ Schoolセクション
    ============================================= */
