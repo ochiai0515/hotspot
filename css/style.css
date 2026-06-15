@@ -1762,6 +1762,19 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 8px;
 }
 
+.contact-person-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  margin-bottom: 2px;
+}
+
+.contact-person-org {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
 .preparing {
   display: inline-block;
   margin-left: 6px;
