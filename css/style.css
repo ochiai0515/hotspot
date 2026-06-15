@@ -1278,11 +1278,30 @@ p:last-child { margin-bottom: 0; }
 }
 
 .contact-lead {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.05rem;
-  color: var(--dark-brown);
-  text-align: center;
-  margin-bottom: 32px;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  text-align: left;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+.contact-card {
+  background: var(--beige);
+  border: 1px solid var(--beige-dark);
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+  max-width: 400px;
+}
+
+.contact-card__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--warm-brown);
+  margin-bottom: 10px;
+}
+
+.contact-card__btn {
+  margin-top: 18px;
 }
 
 .contact-methods {
@@ -1495,10 +1514,7 @@ p:last-child { margin-bottom: 0; }
 .footer-inner {
   max-width: 860px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(184, 168, 152, 0.2);
 }
 
@@ -1570,15 +1586,6 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.05em;
 }
 
-@media (min-width: 640px) {
-  .footer-inner {
-    grid-template-columns: 2fr 1fr 1fr;
-    align-items: start;
-  }
-  .footer-nav {
-    flex-direction: column;
-  }
-}
 
 /* =============================================
    スクロールトップボタン
@@ -1785,38 +1792,33 @@ p:last-child { margin-bottom: 0; }
   color: var(--text-light);
 }
 
-/* JBM紹介セクション（フッター直前） */
+/* JBMについてセクション（フッター直前） */
 .jbm-about {
-  background: #2e1e10;
-  padding: 44px 28px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--cream);
+  padding: 40px 20px;
+  border-top: 1px solid var(--beige-dark);
 }
 
 .jbm-about__inner {
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
-}
-
-.jbm-about__label {
-  font-size: 0.66rem;
-  letter-spacing: 0.22em;
-  color: var(--green-light);
-  margin-bottom: 12px;
-  text-transform: uppercase;
+  background: var(--white);
+  border: 1px solid var(--beige-dark);
+  border-radius: 10px;
+  padding: 24px 28px;
 }
 
 .jbm-about__heading {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 0.9rem;
-  color: var(--beige);
-  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  margin-bottom: 10px;
   font-weight: 400;
 }
 
 .jbm-about__body {
-  font-size: 0.82rem;
-  color: var(--stone-light);
-  line-height: 2;
-  margin-bottom: 8px;
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin: 0;
 }
