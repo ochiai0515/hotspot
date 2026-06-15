@@ -1517,6 +1517,13 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.1em;
 }
 
+.footer-address {
+  font-size: 0.82rem;
+  color: var(--stone-light);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+
 .footer-info p {
   font-size: 0.85rem;
   color: var(--stone-light);
@@ -1711,4 +1718,92 @@ p:last-child { margin-bottom: 0; }
   outline: 3px solid var(--terracotta);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* =============================================
+   運営情報・JBM関連
+   ============================================= */
+
+/* 問い合わせセクション内の運営ボックス */
+.operator-box {
+  background: var(--beige);
+  border: 1px solid var(--beige-dark);
+  border-radius: 12px;
+  padding: 24px 26px;
+  margin-top: 32px;
+  font-size: 0.86rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+}
+
+.operator-box strong {
+  color: var(--dark-brown);
+  font-weight: 400;
+}
+
+.operator-box__sub-heading {
+  color: var(--text-mid) !important;
+  font-size: 0.82rem;
+}
+
+.operator-box__note {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.operator-box a {
+  color: var(--terracotta);
+}
+
+.operator-box__title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  margin-bottom: 8px;
+}
+
+.preparing {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.72rem;
+  background: rgba(74, 55, 40, 0.08);
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: var(--text-light);
+}
+
+/* JBM紹介セクション（フッター直前） */
+.jbm-about {
+  background: #2e1e10;
+  padding: 44px 28px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.jbm-about__inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.jbm-about__label {
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  color: var(--green-light);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.jbm-about__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  color: var(--beige);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.jbm-about__body {
+  font-size: 0.82rem;
+  color: var(--stone-light);
+  line-height: 2;
+  margin-bottom: 8px;
 }
