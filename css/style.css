@@ -1770,16 +1770,18 @@ p:last-child { margin-bottom: 0; }
 }
 
 .contact-person-name {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--dark-brown);
-  margin-bottom: 2px;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .contact-person-org {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-light);
-  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
 }
 
 .preparing {
