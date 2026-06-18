@@ -689,6 +689,21 @@
     </svg>
   </button>
 
+  <!-- JBMロゴ（虫採り演出） -->
+  <a href="#" class="jbm-beetle" id="jbmBeetle" aria-label="合同会社JBMのページへ">
+    <img src="images/m_blue_cmyk.png" alt="合同会社JBM">
+  </a>
+  <script>
+    (function () {
+      var el = document.getElementById('jbmBeetle');
+      if (!el) return;
+      var vw = window.innerWidth  || 800;
+      var vh = window.innerHeight || 600;
+      el.style.left = Math.round(80 + Math.random() * Math.max(60, vw - 240)) + 'px';
+      el.style.top  = Math.round(90 + Math.random() * Math.max(60, vh - 240)) + 'px';
+    })();
+  </script>
+
   <script src="js/script.js"></script>
 </body>
 </html>

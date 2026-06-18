@@ -1822,3 +1822,42 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.9;
   margin: 0;
 }
+
+/* =============================================
+   JBM ロゴ（虫採り演出）
+   ============================================= */
+.jbm-beetle {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  display: block;
+  z-index: 9999;
+  text-decoration: none;
+  opacity: 0;
+  animation: jbmShow 14s ease forwards;
+  animation-delay: 3s;
+}
+
+.jbm-beetle img {
+  width: 60px;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.jbm-beetle:hover img {
+  filter: drop-shadow(0 4px 10px rgba(74, 55, 40, 0.25));
+}
+
+@keyframes jbmShow {
+  0%   { opacity: 0; }
+  9%   { opacity: 1; }
+  86%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .jbm-beetle img {
+    width: 48px;
+  }
+}
