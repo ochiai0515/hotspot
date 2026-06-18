@@ -1837,19 +1837,19 @@ p:last-child { margin-bottom: 0; }
 }
 
 .jbm-hidden-logo img {
-  width: 20px;
+  width: 28px;
   height: auto;
   display: block;
 }
 
 .jbm-hidden-logo:hover {
   opacity: 1;
-  transform: translateY(-2px);
-  filter: drop-shadow(0 2px 5px rgba(74, 55, 40, 0.2));
+  transform: translateY(-3px);
+  filter: drop-shadow(0 3px 6px rgba(74, 55, 40, 0.25));
 }
 
 @media (max-width: 640px) {
   .jbm-hidden-logo img {
-    width: 16px;
+    width: 22px;
   }
 }
