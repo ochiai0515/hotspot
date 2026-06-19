@@ -1850,6 +1850,19 @@ p:last-child { margin-bottom: 0; }
   filter: drop-shadow(0 3px 6px rgba(74, 55, 40, 0.25));
 }
 
+.jbm-hidden-logo:hover img {
+  animation: beetle-rustle 0.28s ease-in-out infinite;
+}
+
+@keyframes beetle-rustle {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(0.8px, -0.8px) rotate(-2deg); }
+  40%  { transform: translate(-0.8px, 0.8px) rotate(1.5deg); }
+  60%  { transform: translate(0.8px, 0) rotate(-1.5deg); }
+  80%  { transform: translate(-0.8px, -0.8px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
 @media (max-width: 640px) {
   .jbm-hidden-logo img {
     width: 22px;
