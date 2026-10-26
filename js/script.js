@@ -86,29 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ⑤ お問い合わせフォーム送信（静的サイト用ダミー処理）
-  window.handleSubmit = function (e) {
-    e.preventDefault();
-    const form = document.getElementById('contactForm');
-    const success = document.getElementById('formSuccess');
-    // ここではフォームを隠して完了メッセージを表示
-    form.style.display = 'none';
-    success.style.display = 'block';
-    // 実際の送信先（Formspree等）に繋ぐ場合はここにfetchを記述
-    /*
-    const formData = new FormData(form);
-    fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(function(response) {
-      if (response.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }
-    });
-    */
-  };
 
   // ⑥ 石畳エフェクト（ヒーローセクションのパターンをわずかに動かす）
   const stoneBg = document.querySelector('.stone-pattern');

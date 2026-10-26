@@ -608,31 +608,41 @@
         <h2 class="section-title">お問い合わせ</h2>
         <p class="contact-lead">見学・ご相談・ご利用に関するお問い合わせは、お気軽にご連絡ください。</p>
 
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-success" id="formSuccess" data-fs-success style="display:none;">
+          <div class="success-icon handwritten">✓</div>
+          <p>お問い合わせありがとうございます。<br>2営業日以内にご返信します。</p>
+        </div>
+        <div class="form-error" data-fs-error style="display:none; color:#c0392b; margin-bottom:1rem;"></div>
+
+        <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label for="name">お名前 <span class="required">必須</span></label>
-            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+            <input type="text" id="name" name="name" placeholder="山田 太郎" required data-fs-field>
+            <span data-fs-error="name" style="color:#c0392b; font-size:0.85em;"></span>
           </div>
           <div class="form-group">
             <label for="relation">お立場 <span class="required">必須</span></label>
-            <select id="relation" name="relation" required>
+            <select id="relation" name="relation" required data-fs-field>
               <option value="">選択してください</option>
               <option value="parent">保護者</option>
               <option value="student">本人（中高生）</option>
               <option value="other">その他</option>
             </select>
+            <span data-fs-error="relation" style="color:#c0392b; font-size:0.85em;"></span>
           </div>
           <div class="form-group">
             <label for="email">メールアドレス <span class="required">必須</span></label>
-            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required data-fs-field>
+            <span data-fs-error="email" style="color:#c0392b; font-size:0.85em;"></span>
           </div>
           <div class="form-group">
             <label for="tel">電話番号</label>
-            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000">
+            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" data-fs-field>
           </div>
           <div class="form-group">
             <label for="message">ご相談・ご質問の内容 <span class="required">必須</span></label>
-            <textarea id="message" name="message" placeholder="気になっていること、聞いてみたいこと、なんでもお気軽にどうぞ。" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="気になっていること、聞いてみたいこと、なんでもお気軽にどうぞ。" rows="5" required data-fs-field></textarea>
+            <span data-fs-error="message" style="color:#c0392b; font-size:0.85em;"></span>
           </div>
           <div class="form-check">
             <label class="checkbox-label">
@@ -640,12 +650,8 @@
               <span>プライバシーポリシーに同意します</span>
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">送信する</button>
+          <button type="submit" class="btn btn-primary btn-full" data-fs-submit-btn>送信する</button>
         </form>
-        <div class="form-success" id="formSuccess" style="display:none;">
-          <div class="success-icon handwritten">✓</div>
-          <p>お問い合わせありがとうございます。<br>2営業日以内にご返信します。</p>
-        </div>
 
         <div class="contact-card">
           <p class="contact-card__label">見学・相談窓口</p>
@@ -691,5 +697,10 @@
 
 
   <script src="js/script.js"></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contactForm', formId: 'meaaaeeb' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
